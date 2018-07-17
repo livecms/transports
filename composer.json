@@ -1,0 +1,19 @@
+{
+    "name": "livecms/transports",
+    "description": "Live CMS Transports",
+    "homepage": "https://github.com/livecms/transports",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mokhamad Rofiudin",
+            "email": "mokh.rofiudin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LiveCMS\\Transport\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

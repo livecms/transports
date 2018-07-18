@@ -33,12 +33,19 @@ class HtmlTransport
     public function pull($name = null)
     {
         $html = $this->get($name);
-        $this->set(null, $name);
+        $this->flush($name);
         return $html;
     }
 
-    public function flush()
+    public function flush($name)
     {
-        $this->set();
+        $this->set(null, $name);
+        return $this;
+    }
+
+    public function flushAll()
+    {
+        static::$html = [];
+        return $this;
     }
 }

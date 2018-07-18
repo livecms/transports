@@ -90,7 +90,7 @@ $jsTransport->append($js);
 $js = <<<JS
     $(':input').first().addClass('focus');
 JS;
-$jsTransport->set($js);
+$jsTransport->append($js);
 
 // Show content
 echo $jsTransport->get();

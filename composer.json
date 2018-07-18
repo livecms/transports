@@ -1,7 +1,7 @@
 {
     "name": "livecms/transports",
     "description": "Live CMS Transports",
-    "homepage": "https://gitlab.com/livecms/transports",
+    "homepage": "https://github.com/livecms/transports",
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +13,5 @@
         "psr-4": {
             "LiveCMS\\Transport\\": "src/"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

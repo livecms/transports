@@ -10,13 +10,13 @@ class HtmlTransport
 
     public function set($html = null, $name = null)
     {
-        $name = $name ?? static::DEFAULT;
+        $name = $name ?: static::DEFAULT;
         static::$html[$name] = $html;
     }
 
     public function append($html, $name = null)
     {
-        $name = $name ?? static::DEFAULT;
+        $name = $name ?: static::DEFAULT;
         if (!isset(static::$html[$name])) {
             static::$html[$name] = '';
         }
@@ -26,7 +26,7 @@ class HtmlTransport
 
     public function get($name = null)
     {
-        $name = $name ?? static::DEFAULT;
+        $name = $name ?: static::DEFAULT;
         return static::$html[$name] ?? null;
     }
 

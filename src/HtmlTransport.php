@@ -14,13 +14,15 @@ class HtmlTransport
         static::$html[$name] = $html;
     }
 
-    public function append($html, $name = null)
+    public function append($html, $name = null, $forceIfExist = true)
     {
         $name = $name ?: static::DEFAULT;
         if (!isset(static::$html[$name])) {
             static::$html[$name] = '';
         }
-        static::$html[$name] .= "\r\n".$html;
+        if ($forceIfExist || strpos(static::$html[$name], $html) === false) {
+            static::$html[$name] .= "\r\n".$html;
+        }
         return $this;
     }
 
